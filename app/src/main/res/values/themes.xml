@@ -17,7 +17,9 @@
     </style>
 
     <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.NoActionBar">
@@ -25,7 +27,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="CustomFontStyle.Bold" parent="TextAppearance.AppCompat" >
+    <style name="CustomFontStyle.Bold" parent="TextAppearance.AppCompat">
         <item name="fontPath">fonts/Roboto-Bold.ttf</item>
     </style>
 </resources>

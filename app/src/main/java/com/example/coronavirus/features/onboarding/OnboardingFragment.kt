@@ -4,19 +4,23 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
+import com.example.coronavirus.R
 import com.example.coronavirus.adapter.BaseFragment
+import com.example.coronavirus.databinding.FragmentOnboardingBinding
 import com.example.coronavirus.di.ViewModelFactory
 import com.example.coronavirus.features.onboarding.viewmodel.OnboardingViewModel
 
-// TODO: Rename parameter arguments, choose names that match
 private const val VIEW_TYPE = "view_type"
 
-class IntroFragment : BaseFragment<OnboardingViewModel>() {
-    private val binding by viewBinding(FragmentIntroBinding::inflate)
+class OnboardingFragment : BaseFragment<OnboardingViewModel>() {
+    private val binding by viewBinding(FragmentOnboardingBinding::inflate)
 
     override var viewModel: OnboardingViewModel
-        get() = ViewModelProvider(this, ViewModelFactory{ OnboardingViewModel() })[OnboardingViewModel::class.java]
+        get() = ViewModelProvider(
+            this,
+            ViewModelFactory { OnboardingViewModel() })[OnboardingViewModel::class.java]
         set(value) {}
 
     private var viewType: Int? = null
@@ -36,33 +40,48 @@ class IntroFragment : BaseFragment<OnboardingViewModel>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        when (viewType) {
-//            1 -> {
-//                binding.apply {
-//                    imgCenter.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.wearmask))
-//                    txtTitle.text = getString(R.string.wearmask)
-//                }
-//
-//            }
-//            2 -> {
-//                binding.apply {
-//                    imgCenter.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.washhand))
-//                    txtTitle.text = getString(R.string.handwash)
-//                }
-//            }
-//            3 -> {
-//                binding.apply {
-//                    imgCenter.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.pydistancing))
-//                    txtTitle.text = getString(R.string.distanc)
-//                }
-//            }
-//        }
+        when (viewType) {
+            1 -> {
+                binding.apply {
+                    imgCenter.setImageDrawable(
+                        ContextCompat.getDrawable(
+                            requireContext(),
+                            R.drawable.wearmask
+                        )
+                    )
+                    txtTitle.text = getString(R.string.wearmask)
+                }
+
+            }
+            2 -> {
+                binding.apply {
+                    imgCenter.setImageDrawable(
+                        ContextCompat.getDrawable(
+                            requireContext(),
+                            R.drawable.handwashing
+                        )
+                    )
+                    txtTitle.text = getString(R.string.handwashing)
+                }
+            }
+            3 -> {
+                binding.apply {
+                    imgCenter.setImageDrawable(
+                        ContextCompat.getDrawable(
+                            requireContext(),
+                            R.drawable.pydistancing
+                        )
+                    )
+                    txtTitle.text = getString(R.string.pydistancing)
+                }
+            }
+        }
     }
 
     companion object {
         @JvmStatic
         fun newInstance(viewType: Int) =
-            IntroFragment().apply {
+            OnboardingFragment().apply {
                 arguments = Bundle().apply {
                     putInt(VIEW_TYPE, viewType)
                 }

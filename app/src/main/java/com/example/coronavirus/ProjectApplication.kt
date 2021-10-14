@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import com.example.coronavirus.di.AppComponent
 import com.example.coronavirus.di.AppModule
+import com.example.coronavirus.di.DaggerAppComponent
 import com.example.coronavirus.di.NetworkModule
 import com.example.coronavirus.utils.LocalizationUtil
 import io.github.inflationx.calligraphy3.CalligraphyConfig

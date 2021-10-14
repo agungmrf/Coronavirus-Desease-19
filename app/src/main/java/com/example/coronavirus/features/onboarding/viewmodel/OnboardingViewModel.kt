@@ -32,12 +32,12 @@ class OnboardingViewModel : BaseViewModel() {
     fun firebaseAuthWithGoogle(idToken : String, auth : FirebaseAuth, activity : Activity) {
         val credential = GoogleAuthProvider.getCredential(idToken, null)
         auth.signInWithCredential(credential)
-                .addOnCompleteListener(activity) { task ->
-                    if (task.isSuccessful) {
-                        loginStatus.postValue(true)
-                    } else {
-                        loginStatus.postValue(false)
-                    }
+            .addOnCompleteListener(activity) { task ->
+                if (task.isSuccessful) {
+                    loginStatus.postValue(true)
+                } else {
+                    loginStatus.postValue(false)
                 }
+            }
     }
 }

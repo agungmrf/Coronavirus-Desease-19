@@ -13,13 +13,13 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 @Module
-class NetworkModule(val baseUrl : String) {
+class NetworkModule(val baseUrl: String) {
     private var retrofit: Retrofit? = null
     private val timeout = 30
 
     @Provides
     @Singleton
-    fun provideInterceptor() : HttpLoggingInterceptor {
+    fun provideInterceptor(): HttpLoggingInterceptor {
         val interceptor = HttpLoggingInterceptor()
         interceptor.level = HttpLoggingInterceptor.Level.BODY
         return interceptor
@@ -27,14 +27,15 @@ class NetworkModule(val baseUrl : String) {
 
     @Provides
     @Singleton
-    fun provideOkHttpClient(interceptor: HttpLoggingInterceptor) : OkHttpClient {
-        val apiToken : String? = null
+    fun provideOkHttpClient(interceptor: HttpLoggingInterceptor): OkHttpClient {
+        val apiToken: String? = null
         val httpClient = OkHttpClient.Builder()
             .connectionSpecs(
                 listOf(
                     ConnectionSpec.MODERN_TLS,
                     ConnectionSpec.COMPATIBLE_TLS,
-                    ConnectionSpec.CLEARTEXT)
+                    ConnectionSpec.CLEARTEXT
+                )
             )
             .followRedirects(true)
             .followSslRedirects(true)
@@ -65,7 +66,7 @@ class NetworkModule(val baseUrl : String) {
 
     @Provides
     @Singleton
-    fun provideRetrofit(okHttpClient: OkHttpClient) : Retrofit {
+    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         retrofit = null
 
         retrofit = Retrofit.Builder()
@@ -80,7 +81,7 @@ class NetworkModule(val baseUrl : String) {
 
     @Provides
     @Singleton
-    fun provideApiService(retrofit: Retrofit) : ApiService {
+    fun provideApiService(retrofit: Retrofit): ApiService {
         return retrofit.create(ApiService::class.java)
     }
 }

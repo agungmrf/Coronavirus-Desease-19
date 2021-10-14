@@ -106,7 +106,6 @@ object DateOperationUtil {
             println("Date in milli :: $timeInMilliseconds")
             return timeInMilliseconds
         } catch (e: ParseException) {
-            // TODO Auto-generated catch block
             e.printStackTrace()
         }
 

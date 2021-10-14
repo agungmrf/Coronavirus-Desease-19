@@ -22,7 +22,7 @@ class MainViewModel : BaseViewModel() {
     lateinit var service: ApiService
 
     @Inject
-    lateinit var apps : Application
+    lateinit var apps: Application
 
     val summaryData = MutableLiveData<Summary?>()
     val networkStatus = MutableLiveData<NetworkCallStatus>()
@@ -41,12 +41,24 @@ class MainViewModel : BaseViewModel() {
                             summaryData.postValue(response.body())
                         } else {
                             summaryData.postValue(null)
-                            networkStatus.postValue(NetworkCallStatus(false, response.message(), response.code()))
+                            networkStatus.postValue(
+                                NetworkCallStatus(
+                                    false,
+                                    response.message(),
+                                    response.code()
+                                )
+                            )
                         }
                     } else {
                         response.errorBody()
                         summaryData.postValue(null)
-                        networkStatus.postValue(NetworkCallStatus(false, response.message(), response.code()))
+                        networkStatus.postValue(
+                            NetworkCallStatus(
+                                false,
+                                response.message(),
+                                response.code()
+                            )
+                        )
                     }
                 } catch (e: HttpException) {
                     println(e.message())
@@ -61,12 +73,12 @@ class MainViewModel : BaseViewModel() {
         }
     }
 
-    fun logout(token : String){
+    fun logout(token: String) {
         Firebase.auth.signOut()
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(token)
-                .requestEmail()
-                .build()
+            .requestIdToken(token)
+            .requestEmail()
+            .build()
 
         val client = GoogleSignIn.getClient(apps.applicationContext, gso)
         client.signOut().addOnCompleteListener {
