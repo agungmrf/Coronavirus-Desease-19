@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,42 +11,42 @@
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:elevation="0dp"
+        android:background="@android:color/transparent"
         android:clipToPadding="false"
-        android:background="@android:color/transparent">
+        app:elevation="0dp">
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="-20dp"
-            app:contentInsetStart="0dp"
-            app:contentInsetEnd="0dp"
+            android:background="@drawable/header"
+            android:elevation="8dp"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:paddingBottom="20dp"
-            android:elevation="8dp"
-            android:background="@drawable/header">
+            app:contentInsetEnd="0dp"
+            app:contentInsetStart="0dp">
 
             <LinearLayout
-                android:layout_marginTop="40dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:textColor="@color/white"
                         style="@style/CustomFontStyle.Bold"
-                        android:text="@string/title"/>
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/title"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
 
                     <RelativeLayout
                         android:layout_width="100dp"
@@ -56,25 +55,25 @@
 
                         <com.skydoves.powerspinner.PowerSpinnerView
                             android:id="@+id/spinner_lang"
+                            style="@style/CustomFontStyle.Bold"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:gravity="center"
-                            android:paddingTop="10dp"
-                            android:paddingBottom="10dp"
                             android:paddingStart="10dp"
+                            android:paddingTop="10dp"
                             android:paddingEnd="20dp"
-                            android:textSize="14.5sp"
-                            style="@style/CustomFontStyle.Bold"
+                            android:paddingBottom="10dp"
+                            android:scrollbars="none"
                             android:textColor="@color/black"
+                            android:textSize="14.5sp"
                             app:spinner_arrow_gravity="end"
+                            app:spinner_arrow_padding="8dp"
                             app:spinner_arrow_show="false"
                             app:spinner_arrow_tint="@color/black"
-                            app:spinner_arrow_padding="8dp"
                             app:spinner_divider_color="@color/divider"
                             app:spinner_divider_show="true"
                             app:spinner_divider_size="0.4dp"
                             app:spinner_popup_animation="fade"
-                            android:scrollbars="none"
                             app:spinner_popup_background="@color/white"
                             app:spinner_popup_elevation="14dp"
                             tools:ignore="RtlHardcoded" />
@@ -82,12 +81,12 @@
                         <ImageView
                             android:layout_width="20dp"
                             android:layout_height="20dp"
-                            android:layout_centerVertical="true"
                             android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
                             android:layout_marginEnd="7dp"
                             android:scaleType="center"
                             android:src="@drawable/play_arrow"
-                            app:tint="@color/black"/>
+                            app:tint="@color/black" />
                     </RelativeLayout>
                 </LinearLayout>
 
@@ -99,19 +98,19 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:textSize="13sp"
+                        android:layout_weight="1"
+                        android:text="@string/choose_country"
                         android:textColor="@color/white"
-                        android:text="@string/choose_country"/>
+                        android:textSize="13sp" />
 
                     <TextView
                         android:id="@+id/txt_last_update"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="12sp"
+                        android:text="@string/last_update"
                         android:textColor="@color/white"
-                        android:text="@string/last_update"/>
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <RelativeLayout
@@ -125,20 +124,20 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:gravity="left"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
                         android:paddingStart="10dp"
+                        android:paddingTop="10dp"
                         android:paddingEnd="20dp"
+                        android:paddingBottom="10dp"
+                        android:scrollbars="none"
+                        android:textColor="@color/black"
                         android:textSize="14.5sp"
                         android:textStyle="bold"
-                        android:textColor="@color/black"
                         app:spinner_arrow_gravity="end"
-                        app:spinner_arrow_tint="@color/black"
                         app:spinner_arrow_padding="8dp"
                         app:spinner_arrow_show="false"
+                        app:spinner_arrow_tint="@color/black"
                         app:spinner_divider_color="@color/divider"
                         app:spinner_divider_show="true"
-                        android:scrollbars="none"
                         app:spinner_divider_size="0.4dp"
                         app:spinner_popup_animation="fade"
                         app:spinner_popup_background="@color/white"
@@ -148,11 +147,11 @@
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:layout_centerVertical="true"
                         android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
                         android:layout_marginEnd="7dp"
                         android:src="@drawable/arrow_vector_power_spinner_library"
-                        app:tint="@color/black"/>
+                        app:tint="@color/black" />
                 </RelativeLayout>
             </LinearLayout>
         </androidx.appcompat.widget.Toolbar>
@@ -167,8 +166,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="20dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -179,168 +178,168 @@
                     android:id="@+id/lyt_total_case"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="10dp"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/box"
-                    android:layout_marginEnd="10dp"
-                    app:layout_constraintWidth_percent="0.47"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    app:layout_constraintBottom_toBottomOf="@id/hor_guideline"
                     app:layout_constraintEnd_toEndOf="@id/ver_guideline"
-                    app:layout_constraintBottom_toBottomOf="@id/hor_guideline">
+                    app:layout_constraintWidth_percent="0.47">
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:gravity="center_vertical"
                         android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/txt_totalcase"
+                            style="@style/CustomFontStyle.Bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
-                            style="@style/CustomFontStyle.Bold"
-                            android:text="0"/>
+                            android:text="0"
+                            android:textSize="15sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="12sp"
+                            android:text="@string/totalcase"
                             android:textColor="@color/yellow"
-                            android:text="@string/totalcase"/>
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/totalcase"/>
+                        android:src="@drawable/totalcase" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/lyt_active_case"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/box"
                     android:orientation="horizontal"
                     android:padding="10dp"
-                    android:background="@drawable/box"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginStart="10dp"
-                    app:layout_constraintWidth_percent="0.47"
+                    app:layout_constraintBottom_toBottomOf="@id/hor_guideline"
                     app:layout_constraintStart_toStartOf="@id/ver_guideline"
-                    app:layout_constraintBottom_toBottomOf="@id/hor_guideline">
+                    app:layout_constraintWidth_percent="0.47">
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:gravity="center_vertical"
                         android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/txt_activecase"
+                            style="@style/CustomFontStyle.Bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
-                            style="@style/CustomFontStyle.Bold"
-                            android:text="0"/>
+                            android:text="0"
+                            android:textSize="15sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="12sp"
+                            android:text="@string/activecase"
                             android:textColor="@color/blue"
-                            android:text="@string/activecase"/>
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/activecase"/>
+                        android:src="@drawable/activecase" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/lyt_recovered"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/box"
                     android:orientation="horizontal"
                     android:padding="10dp"
-                    android:background="@drawable/box"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginTop="10dp"
-                    app:layout_constraintWidth_percent="0.47"
                     app:layout_constraintEnd_toEndOf="@id/ver_guideline"
-                    app:layout_constraintTop_toTopOf="@id/hor_guideline">
+                    app:layout_constraintTop_toTopOf="@id/hor_guideline"
+                    app:layout_constraintWidth_percent="0.47">
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:gravity="center_vertical"
                         android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/txt_recovered"
+                            style="@style/CustomFontStyle.Bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
-                            style="@style/CustomFontStyle.Bold"
-                            android:text="0"/>
+                            android:text="0"
+                            android:textSize="15sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="12sp"
+                            android:text="@string/recovered"
                             android:textColor="@color/green"
-                            android:text="@string/recovered"/>
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/recovered"/>
+                        android:src="@drawable/recovered" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/lyt_death"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="10dp"
-                    android:background="@drawable/box"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    app:layout_constraintWidth_percent="0.47"
+                    android:background="@drawable/box"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
                     app:layout_constraintStart_toStartOf="@id/ver_guideline"
-                    app:layout_constraintTop_toTopOf="@id/hor_guideline">
+                    app:layout_constraintTop_toTopOf="@id/hor_guideline"
+                    app:layout_constraintWidth_percent="0.47">
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:gravity="center_vertical"
                         android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/txt_death"
+                            style="@style/CustomFontStyle.Bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
-                            style="@style/CustomFontStyle.Bold"
-                            android:text="0"/>
+                            android:text="0"
+                            android:textSize="15sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="12sp"
+                            android:text="@string/death"
                             android:textColor="@color/red"
-                            android:text="@string/death"/>
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/death"/>
+                        android:src="@drawable/death" />
                 </LinearLayout>
 
                 <androidx.constraintlayout.widget.Guideline
@@ -348,14 +347,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_percent="0.5"/>
+                    app:layout_constraintGuide_percent="0.5" />
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/ver_guideline"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    app:layout_constraintGuide_percent="0.5"/>
+                    app:layout_constraintGuide_percent="0.5" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
@@ -364,68 +363,68 @@
                 android:layout_height="300dp"
                 android:layout_marginLeft="12dp"
                 android:layout_marginRight="12dp"
-                android:orientation="vertical"
-                android:background="@drawable/box">
+                android:background="@drawable/box"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/txt_title_ratio"
+                    style="@style/CustomFontStyle.Bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    android:padding="10dp"
-                    style="@style/CustomFontStyle.Bold"
                     android:layout_marginStart="7dp"
-                    android:text="@string/rasio"/>
+                    android:padding="10dp"
+                    android:text="@string/rasio"
+                    android:textSize="15sp" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
 
                     <TextView
                         android:id="@+id/txt_ratio_percentage"
+                        style="@style/CustomFontStyle.Bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:text="0%"
-                        style="@style/CustomFontStyle.Bold" />
+                        android:text="0%" />
 
                     <com.google.android.material.progressindicator.CircularProgressIndicator
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_centerInParent="true"
-                        app:indicatorSize="100dp"
                         android:progress="0"
-                        app:trackCornerRadius="5dp"
-                        app:trackThickness="6dp"
-                        app:trackColor="@color/grey"
+                        android:rotation="180"
                         app:indicatorColor="@color/primary_light"
-                        android:rotation="180"/>
+                        app:indicatorSize="100dp"
+                        app:trackColor="@color/grey"
+                        app:trackCornerRadius="5dp"
+                        app:trackThickness="6dp" />
 
                     <com.google.android.material.progressindicator.CircularProgressIndicator
                         android:id="@+id/recovered_progress"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_centerInParent="true"
-                        app:indicatorSize="120dp"
                         android:progress="0"
-                        app:trackCornerRadius="5dp"
-                        app:trackThickness="6dp"
+                        android:rotation="180"
                         app:indicatorColor="@color/primary_light"
-                        android:rotation="180" />
+                        app:indicatorSize="120dp"
+                        app:trackCornerRadius="5dp"
+                        app:trackThickness="6dp" />
 
                     <com.google.android.material.progressindicator.CircularProgressIndicator
                         android:id="@+id/active_progress"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_centerInParent="true"
-                        app:indicatorSize="140dp"
                         android:progress="0"
-                        app:trackCornerRadius="5dp"
-                        app:trackThickness="6dp"
+                        android:rotation="180"
                         app:indicatorColor="@color/primary"
-                        android:rotation="180"/>
+                        app:indicatorSize="140dp"
+                        app:trackCornerRadius="5dp"
+                        app:trackThickness="6dp" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -449,24 +448,24 @@
                                 android:layout_width="10dp"
                                 android:layout_height="10dp"
                                 android:layout_centerVertical="true"
-                                android:background="@drawable/circle_primary"/>
+                                android:background="@drawable/circle_primary" />
 
                             <TextView
                                 android:id="@+id/txt_affected_chart"
+                                style="@style/CustomFontStyle.Bold"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
                                 android:layout_toEndOf="@id/view_dot1"
-                                android:textSize="15sp"
-                                style="@style/CustomFontStyle.Bold"
-                                android:text="0"/>
+                                android:text="0"
+                                android:textSize="15sp" />
                         </RelativeLayout>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
-                            android:text="@string/affect"/>
+                            android:text="@string/affect" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -485,24 +484,24 @@
                                 android:layout_width="10dp"
                                 android:layout_height="10dp"
                                 android:layout_centerVertical="true"
-                                android:background="@drawable/circle_primary_light"/>
+                                android:background="@drawable/circle_primary_light" />
 
                             <TextView
                                 android:id="@+id/txt_recovered_chart"
+                                style="@style/CustomFontStyle.Bold"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
                                 android:layout_toEndOf="@id/view_dot2"
-                                android:textSize="15sp"
-                                style="@style/CustomFontStyle.Bold"
-                                android:text="0"/>
+                                android:text="0"
+                                android:textSize="15sp" />
                         </RelativeLayout>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
-                            android:text="@string/recovered"/>
+                            android:text="@string/recovered" />
                     </LinearLayout>
                 </RelativeLayout>
             </LinearLayout>

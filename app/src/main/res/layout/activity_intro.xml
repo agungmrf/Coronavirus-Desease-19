@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".features.intro.IntroActivity"
     android:gravity="center_horizontal"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".features.intro.IntroActivity">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/pager_intro"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1" />
 
     <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
         android:id="@+id/dots_indicator"
@@ -26,49 +25,49 @@
         app:dotsSize="7dp"
         app:dotsSpacing="4dp"
         app:dotsWidthFactor="3.5"
-        app:selectedDotColor="@color/primary"
-        app:progressMode="false" />
+        app:progressMode="false"
+        app:selectedDotColor="@color/primary" />
 
     <Button
         android:id="@+id/btn_next"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:background="@drawable/round_button_all"
         android:layout_margin="20dp"
+        android:background="@drawable/round_button_all"
         android:padding="10dp"
-        android:visibility="gone"
+        android:text="Next"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:text="Next"/>
+        android:visibility="gone" />
 
     <LinearLayout
         android:id="@+id/lyt_login"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:orientation="horizontal"
         android:layout_margin="20dp"
-        android:visibility="visible"
+        android:background="@drawable/round_button_dark"
         android:gravity="center_vertical"
-        android:background="@drawable/round_button_dark">
+        android:orientation="horizontal"
+        android:visibility="visible">
 
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            app:tint="@color/white"
             android:layout_margin="20dp"
-            android:src="@drawable/googleg_disabled_color_18"/>
+            android:src="@drawable/googleg_disabled_color_18"
+            app:tint="@color/white" />
 
         <Button
             android:id="@+id/btn_login"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="48dp"
-            android:background="@drawable/round_button"
-            android:textAllCaps="false"
             style="?android:attr/borderlessButtonStyle"
-            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_button"
+            android:text="Login with Gmail"
+            android:textAllCaps="false"
             android:textColor="@color/white"
-            android:text="Login with Gmail"/>
+            android:textStyle="bold" />
     </LinearLayout>
 </LinearLayout>
