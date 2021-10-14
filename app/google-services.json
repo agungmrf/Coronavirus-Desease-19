@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1003617729222",
+    "project_id": "coronavirus-506c0",
+    "storage_bucket": "coronavirus-506c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003617729222:android:96da4fedffc19fcda5b5c7",
+        "android_client_info": {
+          "package_name": "com.example.coronavirus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1003617729222-bbnboeam7c0fpnfgm1vbn2refdgbp3bj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXPRA35z-ULFcoojgJ9NRm9erfARRSJwo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1003617729222-bbnboeam7c0fpnfgm1vbn2refdgbp3bj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
