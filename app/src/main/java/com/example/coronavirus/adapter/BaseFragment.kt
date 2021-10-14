@@ -6,7 +6,7 @@ import androidx.viewbinding.ViewBinding
 
 abstract class BaseFragment<VModel : BaseViewModel> : Fragment() {
 
-    abstract val FragmentIntroBinding: Unit
+    abstract val FragmentOnboardingBinding: Unit
     abstract var viewModel : VModel
 
     inline fun <T : ViewBinding> Fragment.viewBinding(
