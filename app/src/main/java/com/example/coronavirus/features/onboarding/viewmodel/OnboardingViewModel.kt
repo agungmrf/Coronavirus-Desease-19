@@ -1,4 +1,4 @@
-package com.example.coronavirus.features.intro.viewmodel
+package com.example.coronavirus.features.onboarding.viewmodel
 
 import android.app.Activity
 import android.app.Application
@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import javax.inject.Inject
 
-class IntroViewModel : BaseViewModel() {
+class OnboardingViewModel : BaseViewModel() {
     @Inject
     lateinit var apps : Application
 

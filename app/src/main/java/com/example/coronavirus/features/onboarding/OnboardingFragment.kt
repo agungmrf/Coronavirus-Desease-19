@@ -1,24 +1,22 @@
-package com.example.coronavirus.features.intro
+package com.example.coronavirus.features.onboarding
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
-import com.example.coronavirus.R
 import com.example.coronavirus.adapter.BaseFragment
 import com.example.coronavirus.di.ViewModelFactory
-import com.example.coronavirus.features.intro.viewmodel.IntroViewModel
+import com.example.coronavirus.features.onboarding.viewmodel.OnboardingViewModel
 
 // TODO: Rename parameter arguments, choose names that match
 private const val VIEW_TYPE = "view_type"
 
-class IntroFragment : BaseFragment<IntroViewModel>() {
+class IntroFragment : BaseFragment<OnboardingViewModel>() {
     private val binding by viewBinding(FragmentIntroBinding::inflate)
 
-    override var viewModel: IntroViewModel
-        get() = ViewModelProvider(this, ViewModelFactory{ IntroViewModel() })[IntroViewModel::class.java]
+    override var viewModel: OnboardingViewModel
+        get() = ViewModelProvider(this, ViewModelFactory{ OnboardingViewModel() })[OnboardingViewModel::class.java]
         set(value) {}
 
     private var viewType: Int? = null

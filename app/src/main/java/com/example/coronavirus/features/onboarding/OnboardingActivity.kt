@@ -1,4 +1,4 @@
-package com.example.coronavirus.features.intro
+package com.example.coronavirus.features.onboarding
 
 import android.app.Activity
 import android.content.Intent
@@ -6,20 +6,16 @@ import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.view.View
-import android.view.View.GONE
-import android.view.View.VISIBLE
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.viewpager2.widget.ViewPager2
 import com.example.coronavirus.ProjectApplication
 import com.example.coronavirus.R
 import com.example.coronavirus.adapter.BaseActivity
 import com.example.coronavirus.databinding.ActivityIntroBinding
 import com.example.coronavirus.di.ViewModelFactory
-import com.example.coronavirus.features.intro.viewmodel.IntroViewModel
+import com.example.coronavirus.features.onboarding.viewmodel.OnboardingViewModel
 import com.example.coronavirus.features.main.MainActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.common.api.ApiException
@@ -28,14 +24,14 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class IntroActivity : BaseActivity<IntroViewModel>() {
+class OnboardingActivity : BaseActivity<OnboardingViewModel>() {
     private val binding by viewBinding(ActivityIntroBinding::inflate)
     private lateinit var auth: FirebaseAuth
 
     override fun nightMode(): Int = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
 
-    override var viewModel: IntroViewModel
-        get() = ViewModelProvider(this, ViewModelFactory{ IntroViewModel() })[IntroViewModel::class.java]
+    override var viewModel: OnboardingViewModel
+        get() = ViewModelProvider(this, ViewModelFactory{ OnboardingViewModel() })[OnboardingViewModel::class.java]
         set(value) {}
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -87,11 +83,11 @@ class IntroActivity : BaseActivity<IntroViewModel>() {
 
     private fun setupObserver(){
         viewModel.apply {
-            loginStatus.observe(this@IntroActivity, { status ->
+            loginStatus.observe(this@OnboardingActivity, { status ->
                 if (status) {
                     openMain()
                 } else {
-                    Toast.makeText(this@IntroActivity, getString(R.string.gagallogin), Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@OnboardingActivity, getString(R.string.gagallogin), Toast.LENGTH_LONG).show()
                 }
             })
         }

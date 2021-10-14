@@ -13,7 +13,7 @@ import com.example.coronavirus.R
 import com.example.coronavirus.adapter.BaseActivity
 import com.example.coronavirus.databinding.ActivityMainBinding
 import com.example.coronavirus.di.ViewModelFactory
-import com.example.coronavirus.features.intro.IntroActivity
+import com.example.coronavirus.features.onboarding.OnboardingActivity
 import com.example.coronavirus.features.main.viewmodel.MainViewModel
 import com.example.coronavirus.model.Countries
 import com.example.coronavirus.utils.DateOperationUtil
@@ -170,7 +170,7 @@ class MainActivity : BaseActivity<MainViewModel>() {
             logoutStatus.observe(this@MainActivity, { status ->
                 hideLoadingDialog()
                 if (status) {
-                    startActivity(Intent(this@MainActivity, IntroActivity::class.java))
+                    startActivity(Intent(this@MainActivity, OnboardingActivity::class.java))
                     finish()
                 }
             })
