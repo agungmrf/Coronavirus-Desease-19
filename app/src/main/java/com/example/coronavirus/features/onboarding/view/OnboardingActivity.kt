@@ -1,4 +1,4 @@
-package com.example.coronavirus.features.onboarding
+package com.example.coronavirus.features.onboarding.view
 
 import android.app.Activity
 import android.content.Intent
