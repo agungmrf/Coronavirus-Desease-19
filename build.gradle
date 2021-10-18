@@ -2,10 +2,11 @@
 buildscript {
     ext.kotlin_version = "1.5.10"
     ext.retrofit = '2.9.0'
+
     repositories {
         google()
+        jcenter()
         mavenCentral()
-        maven { url 'https://jitpack.io' }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.2.2"
@@ -20,6 +21,7 @@ buildscript {
 allprojects {
     repositories {
         google()
+        jcenter()
         mavenCentral()
         maven { url 'https://jitpack.io' }
     }

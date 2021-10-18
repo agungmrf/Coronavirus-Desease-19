@@ -16,10 +16,10 @@ import com.example.coronavirus.R
 import com.example.coronavirus.utils.LocalizationUtil
 import io.github.inflationx.viewpump.ViewPumpContextWrapper
 
-abstract class BaseActivity<VM : BaseViewModel> : AppCompatActivity(), BaseView {
+abstract class BaseActivity<VModel : BaseViewModel> : AppCompatActivity(), BaseView {
     abstract fun nightMode(): Int
 
-    abstract var viewModel: VM
+    abstract var viewModel: VModel
     private var pDialog: Dialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {

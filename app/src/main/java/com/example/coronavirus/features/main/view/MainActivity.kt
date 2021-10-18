@@ -1,4 +1,4 @@
-package com.example.coronavirus.features.main
+package com.example.coronavirus.features.main.view
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -13,7 +13,7 @@ import com.example.coronavirus.R
 import com.example.coronavirus.adapter.BaseActivity
 import com.example.coronavirus.databinding.ActivityMainBinding
 import com.example.coronavirus.di.ViewModelFactory
-import com.example.coronavirus.features.onboarding.OnboardingActivity
+import com.example.coronavirus.features.onboarding.view.OnboardingActivity
 import com.example.coronavirus.features.main.viewmodel.MainViewModel
 import com.example.coronavirus.model.Countries
 import com.example.coronavirus.utils.DateOperationUtil

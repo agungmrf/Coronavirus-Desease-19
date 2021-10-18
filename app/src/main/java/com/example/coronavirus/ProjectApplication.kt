@@ -13,10 +13,11 @@ import io.github.inflationx.viewpump.ViewPump
 
 class ProjectApplication : Application() {
     companion object {
-        lateinit var instance : ProjectApplication
+        lateinit var instance: ProjectApplication
             private set
     }
-    lateinit var appComponent : AppComponent
+
+    lateinit var appComponent: AppComponent
 
     override fun onCreate() {
         super.onCreate()
