@@ -11,10 +11,10 @@
         android:supportsRtl="true">
         <activity
             android:name=".features.main.view.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".features.onboarding.view.OnboardingActivity"
             android:theme="@style/AppTheme.NoActionBar">
-<!--        <activity-->
-<!--            android:name=".features.onboarding.OnboardingActivity"-->
-<!--            android:theme="@style/AppTheme.NoActionBar">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
