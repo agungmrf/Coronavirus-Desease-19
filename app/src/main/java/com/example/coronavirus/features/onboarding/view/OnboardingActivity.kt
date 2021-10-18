@@ -20,7 +20,7 @@ import com.example.coronavirus.adapter.BaseActivity
 import com.example.coronavirus.adapter.ViewPagerAdapter
 import com.example.coronavirus.databinding.ActivityOnboardingBinding
 import com.example.coronavirus.di.ViewModelFactory
-import com.example.coronavirus.features.main.MainActivity
+import com.example.coronavirus.features.main.view.MainActivity
 import com.example.coronavirus.features.onboarding.viewmodel.OnboardingViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.common.api.ApiException

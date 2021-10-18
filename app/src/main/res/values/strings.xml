@@ -15,7 +15,7 @@
     <string name="pydistancing">Pyshical Distancing</string>
     <string name="gagallogin">Cannot login with Google</string>
 
-    <string name="token">564901329123-s105le4g1gciv4n0o2in8g5mvhpd4ppi.apps.googleusercontent.com</string>
+    <string name="token">1003617729222-bbnboeam7c0fpnfgm1vbn2refdgbp3bj.apps.googleusercontent.com</string>
     <string name="logout_msg">Logging out …</string>
     <string name="login_msg">Logging in with Google …</string>
     <string name="fail_summary">Cannot get summary data</string>

@@ -12,11 +12,11 @@
     <string name="affect">Tertular</string>
     <string name="last_update">Update terakhir</string>
     <string name="wearmask">Memakai Masker</string>
-    <string name="handwash"><![CDATA[Cuci & Bersihkan Tangan]]></string>
-    <string name="distanc">Jaga Jarak</string>
+    <string name="handwashing"><![CDATA[Cuci & Bersihkan Tangan]]></string>
+    <string name="pydistancing">Jaga Jarak</string>
     <string name="gagallogin">Gagal login ke akun Google</string>
 
-    <string name="token">564901329123-s105le4g1gciv4n0o2in8g5mvhpd4ppi.apps.googleusercontent.com</string>
+    <string name="token">1003617729222-bbnboeam7c0fpnfgm1vbn2refdgbp3bj.apps.googleusercontent.com</string>
     <string name="logout_msg">Keluar akun …</string>
     <string name="login_msg">Masuk dengan Google …</string>
     <string name="fail_summary">Tidak bisa mendapatkan data</string>
